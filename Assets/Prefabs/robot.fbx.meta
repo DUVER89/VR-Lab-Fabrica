@@ -33,12 +33,12 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: rutinaRobot
+      name: RutinaRobot
       takeName: Armature|ArmatureAction
       internalID: 4781951162920444690
       firstFrame: 0
       lastFrame: 760
-      wrapMode: 2
+      wrapMode: 8
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -111,7 +111,47 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: robot(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: robot(Clone)
+      position: {x: 6.821131, y: 0.3390052, z: 1.8175399}
+      rotation: {x: -0.68637025, y: -0.16998813, z: -0.16998814, w: 0.68637013}
+      scale: {x: 54.3359, y: 54.3359, z: 54.3359}
+    - name: Pecho
+      parentName: Armature
+      position: {x: -7.57793e-12, y: 7.539844e-12, z: 8.55194e-11}
+      rotation: {x: 0.63857627, y: -0.30367804, z: -0.30367804, w: 0.63857627}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: BrazoI
+      parentName: Pecho
+      position: {x: -0.004800977, y: 0.0027094104, z: -6.0673633e-10}
+      rotation: {x: -0.00000028560368, y: -0.0000000045812154, z: 0.9913109, w: 0.13153976}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1}
+    - name: BrazoD
+      parentName: Pecho
+      position: {x: 0.0046156296, y: 0.0026415996, z: -3.0871308e-10}
+      rotation: {x: -0.00000022547641, y: -0.00000008443091, z: 0.9913109, w: -0.13153976}
+      scale: {x: 1.0000015, y: 0.9999999, z: 1}
+    - name: Cabeza
+      parentName: Pecho
+      position: {x: -8.505777e-13, y: 0.0050737313, z: 1.0271981e-10}
+      rotation: {x: 0.00000006711024, y: -0.00000005215412, z: -0.0013333306, w: 0.9999991}
+      scale: {x: 0.9999997, y: 0.99999976, z: 1}
+    - name: Pierna
+      parentName: Pecho
+      position: {x: -1.9995113e-19, y: -0.0004238698, z: -8.956234e-17}
+      rotation: {x: 1, y: 1.6559496e-15, z: 0.000000044703484, w: -0.00000019470718}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: Ruedass robot.001
+      parentName: robot(Clone)
+      position: {x: 6.829774, y: 0.06784961, z: 1.8170027}
+      rotation: {x: -0.54684544, y: -0.44828573, z: -0.44828582, w: 0.5468453}
+      scale: {x: 54.335896, y: 54.335896, z: 54.335903}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
