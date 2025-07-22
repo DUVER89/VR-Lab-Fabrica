@@ -1,37 +1,45 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-public class RobotController : MonoBehaviour
+public class RobotNavController : MonoBehaviour
 {
-    public Transform robot;           // El objeto robot
-    public Transform[] estaciones;    // Array de estaciones
-    public float velocidad = 5f;      // Velocidad de movimiento
+    public Transform[] estaciones;
+    public Animator animator;
 
-    private Transform destinoActual;
-    private bool mover = false;
+    private NavMeshAgent agent;
+    private int destinoActual = 0;
 
-    void Update()
+    void Start()
     {
-        if (mover && destinoActual != null)
+        agent = GetComponent<NavMeshAgent>();
+        if (estaciones.Length > 0)
         {
-            robot.position = Vector3.MoveTowards(robot.position, destinoActual.position, velocidad * Time.deltaTime);
-
-            if (Vector3.Distance(robot.position, destinoActual.position) < 0.01f)
-            {
-                mover = false;
-            }
+            MoverARuta(destinoActual);
         }
     }
 
-    public void MoverRobotA(int indiceEstacion)
+    void Update()
     {
-        if (indiceEstacion >= 0 && indiceEstacion < estaciones.Length)
+        if (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
         {
-            destinoActual = estaciones[indiceEstacion];
-            mover = true;
+            animator.SetBool("isWalking", true);
         }
         else
         {
-            Debug.LogWarning("Índice fuera del rango de estaciones.");
+            animator.SetBool("isWalking", false);
+        }
+    }
+
+    public void MoverARuta(int indice)
+    {
+        if (indice >= 0 && indice < estaciones.Length)
+        {
+            destinoActual = indice;
+            agent.SetDestination(estaciones[indice].position);
+        }
+        else
+        {
+            Debug.LogWarning("Índice de estación fuera de rango.");
         }
     }
 }
