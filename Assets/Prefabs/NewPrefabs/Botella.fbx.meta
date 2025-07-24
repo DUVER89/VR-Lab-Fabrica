@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d3a0eccc23e5c64899bf22287a0d8fe
+guid: 251e73294b1d1e04d888eeea0be39aff
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Banda
+      name: Botella
       takeName: Scene
       internalID: -623603649343465320
       firstFrame: 1

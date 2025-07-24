@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d3a0eccc23e5c64899bf22287a0d8fe
+guid: d9a0a8e7a0d64dc4fa26de2024a51bee
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Banda
+      name: Palanca
       takeName: Scene
       internalID: -623603649343465320
       firstFrame: 1
-      lastFrame: 770
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
